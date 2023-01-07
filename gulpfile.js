@@ -95,9 +95,3 @@ function watchForChanges(done) {
 const mainTasks = parallel(buildStyles, buildJS, convertImages)
 exports.cleanStuff = cleanStuff
 exports.default = series(mainTasks, startBrowserSync, watchForChanges)
-
-
- 
-
-
-

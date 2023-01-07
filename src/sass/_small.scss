@@ -1,0 +1,37 @@
+@media (min-width: 992px) {
+	.hamburger-button {
+		display: none;
+	}
+
+	header > .nav-desktop {
+		display: flex;
+	}
+
+	.about {
+		&__right {
+			width: 50vw;
+			& p {
+				font-size: 1.8rem;
+				margin-right: 12em;
+			}
+			&__button {
+				font-size: 1.8rem;
+			}
+		}
+	}
+
+	.gallery {
+		&__panel {
+			&__images {
+				&__wrapper {
+					margin-left: 3em;
+					&__image {
+						& > img {
+							width: 20em;
+						}
+					}
+				}
+			}
+		}
+	}
+}

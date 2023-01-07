@@ -1,0 +1,21 @@
+@media (min-width: 1200px) {
+	.hero-section__shadow {
+		& h2 {
+			font-size: 5.2rem;
+		}
+		& h1 {
+			font-size: 2.8rem;
+		}
+		&__cat-boxes {
+			gap: 1.5em;
+			& .header-box {
+				font-size: 2.2rem;
+			}
+		}
+		&__arrowbox-wrapper {
+			&__arrowbox {
+				font-size: 2.2rem;
+			}
+		}
+	}
+}

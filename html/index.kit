@@ -5,15 +5,541 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/slick/slick.css" />
+    <link rel="stylesheet" href="/src/assets/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+
+    <title>EasyDrive - Wypożyczalnia Pojazdów</title>
+    <link rel="icon" type="image/x-icon" href="../dist/img/logoSquare.min.png">
 </head>
 
 <body>
+    <!-- @include 'navDesktop' -->
+    <main>
+        <!-- @include 'navMobile' -->
+        <section class="hero">
+            <div class="hero-section">
+                <div class="hero-section__shadow">
+                    <h1>Wypożyczalnia Pojazdów Mechanicznych</h1>
+                    <h2>EasyDrive</h2>
+                    <div class="hero-section__shadow__cat-boxes">
+                        <p class="hero-section__shadow__cat-boxes header-box">AM</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">A1</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">A2</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">A</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">B</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">B+E</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">C</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">C+E</p>
+                    </div>
+                    <div class="hero-section__shadow__arrowbox-wrapper">
+                        <div class="hero-section__shadow__arrowbox-wrapper__arrowbox header-box">
+                            <p>&#8595;</p>
+                        </div>
+                    </div>
+                    <!-- <span class="iconify hero-section__arrowicon" data-icon="ph:arrow-down-thin"
+                    style="color: #ebebeb; opacity: 0.75;" data-width="35" data-height="35"></span> -->
+                </div>
 
-    <!-- @include 'nav.kit' -->
-    <h1>EasyDrive</h1>
-    <!-- @include 'footer.kit' -->
+            </div>
+        </section>
+        <section class="about">
+            <div class="about wrapper" id="about">
+                <div class="about__left">
+                    <h3>Czym sie zajmujemy?</h3>
+                    <img src="/src/img/aboutus_img.png" alt="pani na motorze">
+                </div>
+                <div class="about__right">
+                    <p>EasyDrive to innowacyjna wypożyczalnia pojazdów mechanicznych. Cechuje się wysoką jakością
+                        oferowanych samochodów. Ze szczególną
+                        starannością dba o sprawność techniczną pojazdów, dlatego stale przeprowadza przeglądy
+                        techniczne w autoryzowanych serwisach. W swojej ofercie posiada zarówno samochody osobowe,
+                        dostawcze jak i również motocykle. Każdy znajdzie coś dla siebie i to w przystępnych cenach.</p>
+                    <!-- <button class="about__right__button button">SPRAWDŹ OFERTĘ ></button> -->
+                    <a href="#offer" class="about__right__button button">SPRAWDŹ OFERTĘ ></a>
+                </div>
+            </div>
+        </section>
+        <section class="offer">
+            <div class="offer-menu wrapper" id="offer">
+                <div class="offer-menu__category-boxes">
+                    <button class="offer-menu__category-boxes__box" data-category-group="A" data-active="false">
+                        <span class="iconify-inline" data-icon="ri:motorbike-line" style="color: #ebebeb;"
+                            data-width="2.2rem"></span>
+                        <p>Kategorie.<br>AM, A1, A2, A</p>
+                    </button>
+                    <button class="offer-menu__category-boxes__box active-box" data-category-group="B"
+                        data-active="true">
+                        <span class="iconify-inline" data-icon="cil:car-alt" style="color: #ebebeb;"
+                            data-width="2.6rem"></span>
+                        <p>Kategorie.<br>B, B+E</p>
+                    </button>
+                    <button class="offer-menu__category-boxes__box" data-category-group="C" data-active="false">
+                        <span class="iconify-inline" data-icon="clarity:truck-line" style="color: #ebebeb;"
+                            data-width="2.6rem"></span>
+                        <p>Kategorie.<br>C, C+E</p>
+                    </button>
+                    <!-- <button class="offer-menu__category-boxes__box" data-category-group="Others" data-active="false">
+                        <span class="iconify-inline" data-icon="ic:twotone-switch-access-shortcut-add"
+                            style="color: #ebebeb;" data-width="2.2rem"></span>
+                        <p>Kwalifikacje <br>i inne</p>
+                    </button> -->
+                </div>
+            </div>
+            <div class="offer-tabs">
+                <ul class="offer-tabs__tab" data-category-group="A">
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>AM</p>
+                            <p class="accentColor">120zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">18</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">AM</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>A1</p>
+                            <p class="accentColor">200zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">18</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">A1</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>A2</p>
+                            <p class="accentColor">250zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">A2</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>A</p>
+                            <p class="accentColor">250zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">24</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">A</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="offer-tabs__tab animate-visibility-visible-offers" data-category-group="B">
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>B Manual</p>
+                            <p class="accentColor">250zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">B</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>B Automat</p>
+                            <p class="accentColor">300zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">B</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>B Premium</p>
+                            <p class="accentColor">800zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">24</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">B</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>B+E</p>
+                            <p class="accentColor">360zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">B+E</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="offer-tabs__tab" data-category-group="C">
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>C</p>
+                            <p class="accentColor">460zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">C</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>C+E</p>
+                            <p class="accentColor">480zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">C+E</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="sing-up">
+                <div class="sing-up__circle">
+                    <div class="sing-up__circle__shape"></div>
+                </div>
+                <div class="sing-up__form">
+                    <p>Został tylko ostatni krok!</p>
+                    <p>Wybrałeś/aś pojazd kategorii <span class="accentColor" id="selectedCourseDisplay">AM</span>.</p>
+                    <p>Wypełnij poniższy formularz, a my skontaktujemy się z tobą w przeciągu najbliższych dni.</p>
+                    <form>
+                        <input type="text" name="name" id="name" minlength="3" maxlength="16" placeholder="Twoje imię"
+                            required>
+                        <input type="email" name="email" id="email" minlength="3" maxlength="48"
+                            placeholder="Adres email">
+                        <input type="tel" name="tel" id="tel" minlength="3" maxlength="9" placeholder="Numer telefonu"
+                            required>
+                        <button type="submit" class="button">WYPOŻYCZ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="gallery">
+            <h3 class="wrapper">
+                <span class="iconify" data-icon="clarity:image-line" style="color: #ebebeb; font-size: 2.6rem;"></span>
+                <span>Nasza flota</span>
+            </h3>
+            <div class="gallery__panel wrapper">
 
+                <!-- <ul class="gallery__panel__list">
+                    <li class="gallery__panel__list__item accentColor" data-gallery-group="motocycles">Motocykle</li>
+                    <li class="gallery__panel__list__item" data-gallery-group="cars">Samochody osobowe</li>
+                    <li class="gallery__panel__list__item" data-gallery-group="trucks">Samochody ciężarowe</li>
+                    <li class="gallery__panel__list__item" data-gallery-group="others">Inne</li>
+                </ul> -->
+                <div class="gallery__panel__images">
+                    <div class="gallery__panel__images__wrapper" id="gallery">
+                        <a href="../dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            <img src="../dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            <img src="../dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            <img src="../dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            <img src="../dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            <img src="../dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="../dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-gallery-group="motocycles">
+                            <img src="../dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="opinions wrapper" id="opinions">
+            <div class="opinions__image-shape">
+                <div class="opinions__image-shape__rectangle"></div>
+                <div class="opinions__image-shape__box">
+                    <div class="opinions__image-shape__box__person-data animate-visibility-visible">
+                        <img src="https://i.pravatar.cc/203" alt="pierwsze zdjęcie osoby, która zostawiła opinię">
+                        <p>Martyna</p>
+                    </div>
+                    <div class="opinions__image-shape__box__person-data">
+                        <img src="https://i.pravatar.cc/202" alt="drugie zdjęcie osoby, która zostawiła opinię">
+                        <p>Jan</p>
+                    </div>
+                    <div class="opinions__image-shape__box__person-data">
+                        <img src="https://i.pravatar.cc/201" alt="trzecie zdjęcie osoby, która zostawiła opinię">
+                        <p>Tomasz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="opinions__opinions-set">
+                <div class="opinions__opinions-set__decoration-line"></div>
+                <h3>Opinie klientów</h3>
+                <div class="opinions__opinions-set__slick">
+                    <div class="opinions__opinions-set__slick__text animate-visibility-visible">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio porro harum sunt expedita
+                            aspernatur quod. <span>😊</span></p>
+                    </div>
+                    <div class="opinions__opinions-set__slick__text">
+                        <p>Duis eget mauris ullamcorper, feugiat arcu eget, tincidunt orci. In non nunc velit optio
+                            porro harum sunt expedita.
+                            <span>😉</span>
+                        </p>
+                    </div>
+                    <div class="opinions__opinions-set__slick__text">
+                        <p>Nam diam mi, euismod dapibus leo volutpat, fringilla rhoncus purus. Nam nunc nibh,
+                            ullamcorper et urna ac, imperdiet pretium ex.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- @include 'footer' -->
+
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../src/assets/slick/slick.min.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from '../src/assets/photoswipe/dist/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery',
+            children: 'a',
+            pswpModule: () => import('../src/assets/photoswipe/dist/photoswipe.esm.js'),
+            wheelToZoom: true,
+            errorMsg: 'Coś poszło nie tak podczas próby załadowania zdjęcia :c',
+            closeOnVerticalDrag: true,
+            imageClickAction: 'zoom',
+            bgClickAction: 'close',
+            tapAction: 'close'
+        });
+        lightbox.init();
+    </script>
+    <script src="/dist/js/main.min.js"></script>
 </body>
 
 </html>
