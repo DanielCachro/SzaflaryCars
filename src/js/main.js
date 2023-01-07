@@ -254,3 +254,5 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 	setFooterCurrentYear()
 })
+
+console.log('test')
