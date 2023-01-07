@@ -945,6 +945,99 @@ body {
 	}
 }
 
+// Team
+
+.team {
+	background-color: $primary;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	& h3 {
+		text-align: center;
+		padding: 2em 0 2em 0;
+		color: $secondary;
+		font-size: 2.4rem;
+		font-weight: 500;
+	}
+
+	& h3::after {
+		content: '';
+		display: block;
+		width: 3em;
+		height: 1px;
+		margin-top: 0.2em;
+		background-color: #00063d;
+	}
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5em;
+		padding-bottom: 8em;
+
+		&__card {
+			display: flex;
+			position: relative;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			width: 15em;
+			height: 20em;
+			background-color: $secondary;
+			transition: transform 1s, opacity 1s;
+
+			& img {
+				width: 13em;
+				height: 13em;
+				object-fit: cover;
+				opacity: 1;
+				transition: opacity 0.1s;
+				transition-delay: 0.25s;
+			}
+
+			&--name {
+				font-size: 2.1rem;
+				color: $primary;
+				opacity: 1;
+				padding-top: 0.25em;
+				text-align: center;
+				font-weight: 200;
+				transition: opacity 0.1s;
+				transition-delay: 0.25s;
+			}
+
+			&--info {
+				position: absolute;
+				transform: rotateY(-180deg);
+				color: $primary;
+				opacity: 0;
+				font-size: 1.3rem;
+				font-weight: 300;
+				text-align: center;
+				transition: opacity 0.1s;
+				transition-delay: 0.25s;
+			}
+
+			&:hover {
+				transform: rotateY(-180deg);
+
+				& img {
+					opacity: 0;
+				}
+
+				.team__cards__card--name {
+					opacity: 0;
+				}
+
+				.team__cards__card--info {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
 // Footer
 
 .footer {
