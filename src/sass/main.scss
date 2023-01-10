@@ -972,6 +972,7 @@ body {
 
 	&__cards {
 		display: flex;
+		justify-content: center;
 		flex-wrap: wrap;
 		gap: 5em;
 		padding-bottom: 8em;
