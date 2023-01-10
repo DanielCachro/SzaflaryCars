@@ -148,6 +148,8 @@ window.addEventListener('DOMContentLoaded', () => {
 				}
 			})
 
+			document.getElementById('offerTabs').scrollIntoView({block: 'center'})
+
 			slickSlide.slick('setPosition').slick('slickGoTo', 0)
 		})
 
@@ -190,6 +192,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			if (!arrOfClickedButtons.includes(selectedButton)) {
 				arrOfClickedButtons.push(selectedButton)
 			}
+			document.getElementById('singup').scrollIntoView({block: 'center'})
 		})
 	})
 
@@ -255,4 +258,3 @@ window.addEventListener('DOMContentLoaded', () => {
 	setFooterCurrentYear()
 })
 
-console.log('test')
