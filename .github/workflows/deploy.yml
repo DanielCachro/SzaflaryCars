@@ -26,10 +26,10 @@ jobs:
 
       - name: Deploy to build branch
         run: |
-          git config --global user.name 'Daniel Cachro'
-          git config --global user.email 'danielcachro@gmail.com'
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git checkout --orphan build
-          git rm -rf .
-          git add dist css index.html
+          git rm -rf .github src .gitignore gulpfile.js package-lock.json package.json
+          git add .
           git commit -m 'Deploy to build branch'
           git push --force origin build
