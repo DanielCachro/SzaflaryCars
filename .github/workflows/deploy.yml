@@ -29,7 +29,7 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git checkout --orphan build
-          git rm -rf .github src .gitignore gulpfile.js package-lock.json package.json
+          git rm -rf .github src node_modules gulpfile.js package-lock.json package.json
           git add .
           git commit -m 'Deploy to build branch'
           git push --force origin build
