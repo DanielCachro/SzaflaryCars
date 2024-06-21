@@ -1,0 +1,35 @@
+name: Deploy to build branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: npm install
+
+      # - name: Run build script
+      #   run: npm run build
+
+      - name: Deploy to build branch
+        run: |
+          git config --global user.name 'Daniel Cachro'
+          git config --global user.email 'danielcachro@gmail.com'
+          git checkout --orphan build
+          git rm -rf .
+          git add dist css index.html
+          git commit -m 'Deploy to build branch'
+          git push --force origin build
