@@ -29,6 +29,7 @@ jobs:
           git config --global user.name 'Daniel Cachro'
           git config --global user.email 'danielcachro@gmail.com'
           git checkout --orphan build
+          git rm -rf .
           git add dist css index.html
           git commit -m 'Deploy to build branch'
           git push --force origin build
