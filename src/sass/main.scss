@@ -705,11 +705,7 @@ body {
 	&__form {
 		width: 150%;
 		margin-right: 2em;
-
-		&__texts {
-			min-width: 15em;
-		}
-
+		
 		& p {
 			font-weight: 300;
 			& span {
@@ -729,6 +725,7 @@ body {
 			max-width: 15em;
 		}
 		& form {
+			overflow: hidden;
 			display: flex;
 			flex-direction: column;
 			& input {
