@@ -428,17 +428,25 @@
                     <div class="sing-up__circle__shape"></div>
                 </div>
                 <div class="sing-up__form">
-                    <p>Został tylko ostatni krok!</p>
-                    <p>Wybrałeś/aś pojazd kategorii <span class="accentColor" id="selectedCourseDisplay">AM</span>.</p>
-                    <p>Wypełnij poniższy formularz, a my skontaktujemy się z tobą w przeciągu najbliższych dni.</p>
-                    <form>
+                    <div class="sing-up__form__texts">
+                        <p>Został tylko ostatni krok!</p>
+                        <p>Wybrałeś/aś pojazd kategorii <span class="accentColor" id="selectedCourseDisplay">AM</span>.
+                        </p>
+                        <p>Wypełnij poniższy formularz, a my skontaktujemy się z tobą w przeciągu najbliższych dni.</p>
+                    </div>
+                    <div class="sing-up__form__texts toggledVisibility" id="form-results">
+                    </div>
+                    <form method="POST" id="form">
                         <input type="text" name="name" id="name" minlength="3" maxlength="16" placeholder="Twoje imię"
-                            required>
+                        required>
                         <input type="email" name="email" id="email" minlength="3" maxlength="48"
-                            placeholder="Adres email">
+                        placeholder="Adres email" required>
                         <input type="tel" name="tel" id="tel" minlength="3" maxlength="9" placeholder="Numer telefonu"
-                            required>
-                        <button type="submit" class="button">WYPOŻYCZ</button>
+                        required>
+                        
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <button type="submit" class="button submitFormButton">WYPOŻYCZ</button>
                     </form>
                 </div>
             </div>
@@ -672,6 +680,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="./dist/assets/slick/slick.min.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     <script type="module">
         import PhotoSwipeLightbox from './dist/assets/photoswipe/dist/photoswipe-lightbox.esm.js';
         const lightbox = new PhotoSwipeLightbox({

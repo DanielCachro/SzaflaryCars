@@ -19,10 +19,12 @@ window.addEventListener('DOMContentLoaded', () => {
 	const selectedCourseSingUpPanelLabel = document.getElementById('selectedCourseDisplay')
 	const arrOfClickedButtons = []
 
-	// Declaration for Gallery
+	// Declaration for Form
 
-	// const arrOfGalleryGroupBtns = document.querySelectorAll('.gallery__panel__list__item')
-	const arrOfAllGalleryImages = document.querySelectorAll('.gallery__panel__images__wrapper__image')
+	const singUpCircle = document.querySelector('.sing-up__circle__shape')
+	const aboveFormTexts = document.querySelectorAll('.sing-up__form__texts')
+	const singUpForm = document.getElementById('form')
+	const formResult = document.getElementById('form-results')
 
 	// Declaration for About
 
@@ -162,16 +164,24 @@ window.addEventListener('DOMContentLoaded', () => {
 	})
 
 	//Sing Up
+	const toggleFormVisibility = () => {
+		const elementsToChangeVisibility = [...aboveFormTexts, singUpForm]
+		elementsToChangeVisibility.forEach(el => el.classList.toggle('toggledVisibility'))
+	}
 
-	//Prevent Submit
-	$(document).ready(function () {
-		$('.sing-up__form').submit(e => {
-			e.preventDefault()
-		})
-	})
+	const formStateDisplay = state => {
+		state === 'submitted' ? singUpCircle.classList.toggle('submitted') : singUpCircle.classList.toggle('failed')
+	}
 
 	singUpButtonsOnTabs.forEach(button => {
+		const resetForm = state => {
+			toggleFormVisibility()
+			formStateDisplay(state)
+		}
 		button.addEventListener('click', e => {
+			singUpCircle.classList.contains('submitted') ? resetForm('submitted') : undefined
+			singUpCircle.classList.contains('failed') ? resetForm('failed') : undefined
+
 			const selectedButton = e.target.closest('button')
 			const buttonArrow = selectedButton.childNodes[1]
 			const selectedTab = e.target.closest('li')
@@ -196,40 +206,58 @@ window.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
-	// Image Gallery
+	form.addEventListener('submit', function (e) {
+		e.preventDefault()
+		const formData = new FormData(form)
+		const object = Object.fromEntries(formData)
+		object.access_key = '79232321-9239-4616-803f-b8b9e527b434'
+		object.subject = 'Nowe zlecenie wynajmu ze strony internetowej'
+		object.from_name = 'Formularz Strona'
+		object.category = selectedCourseSingUpPanelLabel.innerText
+		const json = JSON.stringify(object)
 
-	// const onloadGalleryReset = () => {
-	// 	arrOfAllGalleryImages.forEach(image => {
-	// 		const imageGroup = image.dataset.galleryGroup
-	// 		if (imageGroup === 'motocycles') {
-	// 			image.classList.remove('display-none')
-	// 		} else {
-	// 			image.classList.add('display-none')
-	// 		}
-	// 	})
-	// }
-	// onloadGalleryReset()
+		toggleFormVisibility()
+		formResult.innerHTML = '<p>Przetwarzanie formularza...</p>'
 
-	// arrOfGalleryGroupBtns.forEach(btn => {
-	// 	btn.addEventListener('click', e => {
-	// 		const clickedButton = e.target
-	// 		const selectedGroup = clickedButton.dataset.galleryGroup
+		fetch('https://api.web3forms.com/submit', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			},
+			body: json,
+		})
+			.then(async response => {
+				let json = await response.json()
+				if (response.status == 200) {
+					formResult.innerHTML = `
+					<p>Udało się!</p>
+					<p>Wybrałeś samochód kategorii <span class="accentColor" id="selectedCourseDisplay">${selectedCourseSingUpPanelLabel.innerText}</span>.</p>
+					<p>Czujesz ekscytacje na myśl o swoim nowym samochodzie? Nie musisz długo czekać! Skontaktujemy się z Tobą w przeciągu najbliższych dni. Do usłyszenia!</p>`
+					formStateDisplay('submitted')
+				} else {
+					console.log(response)
+					formResult.innerHTML = `
+					<p>Niestety wystąpił błąd :(</p>
+					<p>${json.message}</p>
+					<p>Jeśli problem będzie się powtarzał, prosimy o kontakt z naszym działem obsługi klienta. Przepraszamy za niedogodności!</p>`
+					formStateDisplay('failed')
+				}
+			})
+			.catch(error => {
+				console.log(error)
+				formResult.innerHTML = `
+				<p>Niestety wystąpił błąd :(</p>
+            	<p>Prosimy spróbować ponownie później.</p>
+				<p>Jeśli problem będzie się powtarzał, prosimy o kontakt z naszym działem obsługi klienta. Przepraszamy za niedogodności!</p>`
+				formStateDisplay('failed')
+			})
+			.then(function () {
+				form.reset()
+			})
+	})
 
-	// 		arrOfGalleryGroupBtns.forEach(btn => {
-	// 			btn.classList.remove('accentColor')
-	// 			clickedButton.classList.add('accentColor')
-	// 		})
-
-	// 		arrOfAllGalleryImages.forEach(image => {
-	// 			const imageGroup = image.dataset.galleryGroup
-	// 			if (selectedGroup === imageGroup) {
-	// 				image.classList.remove('display-none')
-	// 			} else {
-	// 				image.classList.add('display-none')
-	// 			}
-	// 		})
-	// 	})
-	// })
+	// formSubmitButton.addEventListener('click', correctFormStateDisplay)
 
 	let changeOpinion = () => {
 		prevOpinion.classList.remove('animate-visibility-visible')
@@ -257,4 +285,3 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 	setFooterCurrentYear()
 })
-

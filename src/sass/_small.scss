@@ -20,6 +20,13 @@
 		}
 	}
 
+	.sing-up {
+		& .submitted {
+			background-color: transparent;
+			background-image: url('../img/submittedFormCircle.min.svg');
+		}
+	}
+
 	.gallery {
 		&__panel {
 			&__images {

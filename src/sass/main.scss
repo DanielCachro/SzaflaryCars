@@ -663,8 +663,6 @@ body {
 	transform: scale(1.05);
 }
 
-//Sing-Up
-
 .sing-up {
 	max-width: 230px;
 	display: flex;
@@ -688,11 +686,30 @@ body {
 			height: 26em;
 			background-color: $secondary;
 			border-radius: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.submitted {
+			background-color: $correct;
+			transform: rotate(-180deg);
+			transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		}
+
+		.failed {
+			background-color: $fail;
+			transform: rotate(-180deg);
+			transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 		}
 	}
 	&__form {
 		width: 150%;
 		margin-right: 2em;
+
+		&__texts {
+			min-width: 15em;
+		}
+
 		& p {
 			font-weight: 300;
 			& span {
@@ -704,7 +721,8 @@ body {
 			font-size: 1.8rem;
 			font-weight: 500;
 		}
-		& p:nth-child(2) {
+		& p:nth-child(2),
+		& p:nth-child(3) {
 			margin-bottom: 0.5em;
 		}
 		& p:nth-child(3) {
@@ -718,12 +736,13 @@ body {
 				width: 21em;
 				height: 2.4em;
 				padding-left: 1em;
-				margin-top: 0.5em;
+				margin-bottom: 0.5em;
 				border: 1px solid rgba($secondary, $alpha: 0.6);
 				border-radius: 6px;
 				background-color: $primary;
 				color: rgba($secondary, $alpha: 0.8);
 			}
+
 			& input::placeholder {
 				color: rgba($secondary, $alpha: 0.4);
 			}
@@ -732,6 +751,11 @@ body {
 				width: 8em;
 				margin-top: 0.5em;
 			}
+		}
+		& .toggledVisibility {
+			opacity: 0;
+			position: absolute;
+			z-index: -1;
 		}
 	}
 
