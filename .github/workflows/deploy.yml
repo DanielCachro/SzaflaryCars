@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # - name: Run build script
-      #   run: npm run build
+      - name: Run build script
+        run: npm run build
 
       - name: Deploy to build branch
         run: |
