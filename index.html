@@ -10,11 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" type="text/css" href="./dist/assets/slick/slick.css" />
-    <link rel="stylesheet" href="./dist/assets/photoswipe/dist/photoswipe.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./dist/assets/slick/slick.css" /> -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./dist/assets/photoswipe/photoswipe.css">
     <link rel="stylesheet" href="./dist/css/main.min.css">
 
-    <title>SzaflaryCars - Wypożyczalnia Pojazdów</title>
+    <title>SzaflaryCars - Wypożyczalnia Pojazdów Szaflary</title>
+    <meta name="description"
+        content="SzaflaryCars to Twoja zaufana wypożyczalnia pojazdów w Szaflarach. Oferujemy szeroki wybór samochodów i motocykli do wynajęcia na każdą okazję.">
     <link rel="icon" type="image/x-icon" href="./dist/img/logoSquare.min.png">
 </head>
 
@@ -438,12 +441,12 @@
                     </div>
                     <form method="POST" id="form">
                         <input type="text" name="name" id="name" minlength="3" maxlength="16" placeholder="Twoje imię"
-                        required>
+                            required>
                         <input type="email" name="email" id="email" minlength="3" maxlength="48"
-                        placeholder="Adres email" required>
+                            placeholder="Adres email" required>
                         <input type="tel" name="tel" id="tel" minlength="3" maxlength="9" placeholder="Numer telefonu"
-                        required>
-                        
+                            required>
+
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         <div class="h-captcha" data-captcha="true"></div>
                         <button type="submit" class="button submitFormButton">WYPOŻYCZ</button>
@@ -467,72 +470,77 @@
                 <div class="gallery__panel__images">
                     <div class="gallery__panel__images__wrapper" id="gallery">
                         <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
                             <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
                             <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
                             <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
                             <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="989" data-pswp-height="625" target="_blank"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="1000" data-pswp-height="667" target="_blank" data-gallery-group="cars">
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
                             <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
                         </a>
                         <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
-                            data-pswp-width="284" data-pswp-height="177" target="_blank"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
                             data-gallery-group="motocycles">
                             <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
                         </a>
@@ -618,7 +626,7 @@
         <div class="footer__wrap wrapper">
             <div class="footer__wrap__contact">
                 <h3>Kontakt</h3>
-                <a href="https://goo.gl/maps/33AN6opt8FJiTghH6" target="_blank">
+                <a href="https://goo.gl/maps/33AN6opt8FJiTghH6" target="_blank" rel="noopener">
                     <p><span class="iconify-inline" data-icon="fa:map-marker" style="color: #ebebeb;"
                             data-width="1.6rem" data-height="1.6rem"></span>Pod Górą 3<br>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34-425 Szaflary </p>
@@ -634,11 +642,11 @@
             </div>
             <div class="footer__wrap__find-us">
                 <h3>Tu nas znajdziesz</h3>
-                <a href="https://www.instagram.com/" target="_blank">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">
                     <p><span class="iconify-inline" data-icon="ant-design:instagram-filled" style="color: #ebebeb;"
                             data-width="1.6rem" data-height="1.6rem"></span>SzaflaryCars</p>
                 </a>
-                <a href="https://www.facebook.com/" target="_blank">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener">
                     <p><span class="iconify-inline" data-icon="bxl:facebook-circle" style="color: #ebebeb;"
                             data-width="1.6rem" data-height="1.6rem"></span>SzaflaryCars</p>
                 </a>
@@ -679,14 +687,15 @@
     <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="./dist/assets/slick/slick.min.js"></script>
+    <!-- <script type="text/javascript" src="./dist/assets/slick/slick.min.js"></script> -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://web3forms.com/client/script.js" async defer></script>
     <script type="module">
-        import PhotoSwipeLightbox from './dist/assets/photoswipe/dist/photoswipe-lightbox.esm.js';
+        import PhotoSwipeLightbox from './dist/assets/photoswipe/photoswipe-lightbox.esm.js';
         const lightbox = new PhotoSwipeLightbox({
             gallery: '#gallery',
             children: 'a',
-            pswpModule: () => import('./dist/assets/photoswipe/dist/photoswipe.esm.js'),
+            pswpModule: () => import('./dist/assets/photoswipe/photoswipe.esm.js'),
             wheelToZoom: true,
             errorMsg: 'Coś poszło nie tak podczas próby załadowania zdjęcia :c',
             closeOnVerticalDrag: true,
