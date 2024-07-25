@@ -1,0 +1,4 @@
+# Hello =)
+# robots welcome
+User-Agent: *
+Disallow:
