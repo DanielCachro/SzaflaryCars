@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- slick -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- iubenda tag -->
+    <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = { "siteId": 3786144, "cookiePolicyId": 83175401, "lang": "pl", "storage": { "useSiteId": true } };
+    </script>
+    <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/3786144.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+    <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200;300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./dist/assets/photoswipe/photoswipe.css">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+
+    <title>SzaflaryCars - Wypożyczalnia Pojazdów Szaflary</title>
+    <meta name="description"
+        content="SzaflaryCars to Twoja zaufana wypożyczalnia pojazdów w Szaflarach. Oferujemy szeroki wybór samochodów i motocykli do wynajęcia na każdą okazję.">
+    <link rel="icon" type="image/x-icon" href="./dist/img/logoSquare.min.png">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TCB5Q8MWQT"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-TCB5Q8MWQT');
+</script>
+
+<body>
+    <header>
+        <img class="site-logo" src="./dist/img/logo.min.png" alt="logo strony">
+        <button class="hamburger-button">
+            <svg width="5rem" height="5rem" viewBox="0 0 100 100">
+                <path class="line line1"
+                    d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path class="line line3"
+                    d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+            </svg>
+        </button>
+        <ul class="nav-desktop">
+            <li><a href="#about">O Nas</a></li>
+            <li><a href="#offer">Oferta</a></li>
+            <li><a href="#gallery">Flota</a></li>
+            <li><a href="#opinions">Opinie</a></li>
+            <li><a href="#team">Zespół</a></li>
+            <li><a href="#footer">Kontakt</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="navigation-mobile">
+            <div class="nav-mobile" aria-label="Main Menu">
+                <div class="nav-mobile__left-container">
+                    <div class="nav-mobile__left-container__content nav-mobile__left-container__content--enabled"
+                        data-item="1">
+                        <p>Odrobina informacji o naszej działalności.</p>
+                    </div>
+                    <div class="nav-mobile__left-container__content" data-item="2">
+                        <p>Przegląd naszych usług i produktów.</p>
+                    </div>
+                    <div class="nav-mobile__left-container__content" data-item="3">
+                        <p>Nasza nowoczesna flota pojazdów dostosowana do różnorodnych zadań.</p>
+                    </div>
+                    <div class="nav-mobile__left-container__content" data-item="4">
+                        <p>Przeczytaj, co o nas mówią zadowoleni klienci.</p>
+                    </div>
+                    <div class="nav-mobile__left-container__content" data-item="5">
+                        <p>Poznaj naszą załogę i ich doświadczenie.</p>
+                    </div>
+                    <div class="nav-mobile__left-container__content" data-item="6">
+                        <p>Skontaktuj się z nami, jesteśmy do Twojej dyspozycji.</p>
+                    </div>
+                </div>
+                <div class="nav-mobile__right-container">
+                    <ol>
+                        <li tabindex="1"><a href="#about">O nas</a></li>
+                        <li tabindex="2"><a href="#offer">Oferta</a></li>
+                        <li tabindex="3"><a href="#gallery">Flota</a></li>
+                        <li tabindex="4"><a href="#opinions">Opinie</a></li>
+                        <li tabindex="5"><a href="#team">Zespół</a></li>
+                        <li tabindex="6"><a href="#footer">Kontakt</a></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        <section class="hero">
+            <div class="hero-section">
+                <div class="hero-section__shadow">
+                    <h1>Wypożyczalnia Pojazdów Mechanicznych - Szaflary</h1>
+                    <h2>SzaflaryCars</h2>
+                    <div class="hero-section__shadow__cat-boxes">
+                        <p class="hero-section__shadow__cat-boxes header-box">AM</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">A1</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">A2</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">A</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">B</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">B+E</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">C</p>
+                        <p class="hero-section__shadow__cat-boxes header-box">C+E</p>
+                    </div>
+                    <div class="hero-section__shadow__arrowbox-wrapper">
+                        <div class="hero-section__shadow__arrowbox-wrapper__arrowbox header-box">
+                            <p>&#8595;</p>
+                        </div>
+                    </div>
+                    <!-- <span class="iconify hero-section__arrowicon" data-icon="ph:arrow-down-thin"
+                    style="color: #ebebeb; opacity: 0.75;" data-width="35" data-height="35"></span> -->
+                </div>
+
+            </div>
+        </section>
+        <section class="about">
+            <div class="about wrapper" id="about">
+                <div class="about__left">
+                    <h3>Czym sie zajmujemy?</h3>
+                    <img src="./dist/img/aboutus_img.min.png" alt="pani na motorze">
+                </div>
+                <div class="about__right">
+                    <p>SzaflaryCars to innowacyjna wypożyczalnia pojazdów mechanicznych w Szaflarach. Cechuje się wysoką
+                        jakością
+                        oferowanych samochodów. Ze szczególną
+                        starannością dba o sprawność techniczną pojazdów, dlatego stale przeprowadza przeglądy
+                        techniczne w autoryzowanych serwisach. W swojej ofercie posiada zarówno samochody osobowe,
+                        dostawcze jak i również motocykle. Każdy znajdzie coś dla siebie i to w przystępnych cenach.</p>
+                    <!-- <button class="about__right__button button">SPRAWDŹ OFERTĘ ></button> -->
+                    <a href="#offer" class="about__right__button button">SPRAWDŹ OFERTĘ ></a>
+                </div>
+            </div>
+        </section>
+        <section class="offer">
+            <div class="offer-menu wrapper" id="offer">
+                <div class="offer-menu__category-boxes">
+                    <button class="offer-menu__category-boxes__box" data-category-group="A" data-active="false">
+                        <span class="iconify-inline" data-icon="ri:motorbike-line" style="color: #ebebeb;"
+                            data-width="2.2rem"></span>
+                        <p>Kategorie.<br>AM, A1, A2, A</p>
+                    </button>
+                    <button class="offer-menu__category-boxes__box active-box" data-category-group="B"
+                        data-active="true">
+                        <span class="iconify-inline" data-icon="cil:car-alt" style="color: #ebebeb;"
+                            data-width="2.6rem"></span>
+                        <p>Kategorie.<br>B, B+E</p>
+                    </button>
+                    <button class="offer-menu__category-boxes__box" data-category-group="C" data-active="false">
+                        <span class="iconify-inline" data-icon="clarity:truck-line" style="color: #ebebeb;"
+                            data-width="2.6rem"></span>
+                        <p>Kategorie.<br>C, C+E</p>
+                    </button>
+                    <!-- <button class="offer-menu__category-boxes__box" data-category-group="Others" data-active="false">
+                        <span class="iconify-inline" data-icon="ic:twotone-switch-access-shortcut-add"
+                            style="color: #ebebeb;" data-width="2.2rem"></span>
+                        <p>Kwalifikacje <br>i inne</p>
+                    </button> -->
+                </div>
+            </div>
+            <div class="offer-tabs" id="offerTabs">
+                <ul class="offer-tabs__tab" data-category-group="A">
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>AM</p>
+                            <p class="accentColor">120zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">18</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">AM</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>A1</p>
+                            <p class="accentColor">200zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">18</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">A1</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>A2</p>
+                            <p class="accentColor">250zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">A2</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>A</p>
+                            <p class="accentColor">250zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">24</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">A</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="offer-tabs__tab animate-visibility-visible-offers" data-category-group="B">
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>B Manual</p>
+                            <p class="accentColor">250zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">B</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>B Automat</p>
+                            <p class="accentColor">300zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">B</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>B Premium</p>
+                            <p class="accentColor">800zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">24</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">B</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>B+E</p>
+                            <p class="accentColor">360zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">B+E</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="offer-tabs__tab" data-category-group="C">
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>C</p>
+                            <p class="accentColor">460zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">C</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                    <li class="offer-tabs__tab__item">
+                        <div class="offer-tabs__tab__item__header">
+                            <p>Kategoria</p>
+                            <p>C+E</p>
+                            <p class="accentColor">480zł/dzień</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__includes">
+                            <p>Oferta obejmuje:</p>
+                            <p>Wulkanizacja</p>
+                            <p>Pojazd zastępczy</p>
+                            <p>Assistance</p>
+                            <p>Ubezpieczenie</p>
+                            <p>Naprawy bieżące</p>
+                            <p>Door to door</p>
+                        </div>
+                        <div class="offer-tabs__tab__item__requirements">
+                            <p>Wymagania:</p>
+                            <p>Ukończenie <span class="accentColor">21</span> lat</p>
+                            <p>Prawo jazdy kat. <span class="accentColor">C+E</span> od conajmniej <span
+                                    class="accentColor">trzech</span> lat.</p>
+                            <p>Posiadanie karty kredytowej</span></p>
+                        </div>
+                        <button class="offer-tabs__tab__item__signUp-btn button">
+                            Wypożycz <span class="iconify-inline" data-icon="ep:arrow-down"
+                                data-rotate="270deg"></span></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="sing-up" id="singup">
+                <div class="sing-up__circle">
+                    <div class="sing-up__circle__shape"></div>
+                </div>
+                <div class="sing-up__form">
+                    <div class="sing-up__form__texts">
+                        <p>Został tylko ostatni krok!</p>
+                        <p>Wybrałeś/aś pojazd kategorii <span class="accentColor" id="selectedCourseDisplay">AM</span>.
+                        </p>
+                        <p>Wypełnij poniższy formularz, a my skontaktujemy się z tobą w przeciągu najbliższych dni.</p>
+                    </div>
+                    <div class="sing-up__form__texts toggledVisibility" id="form-results">
+                    </div>
+                    <form method="POST" id="form">
+                        <input type="text" name="name" id="name" minlength="3" maxlength="16" placeholder="Twoje imię"
+                            required>
+                        <input type="email" name="email" id="email" minlength="3" maxlength="48"
+                            placeholder="Adres email" required>
+                        <input type="tel" name="tel" id="tel" minlength="3" maxlength="9" placeholder="Numer telefonu"
+                            required>
+
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <div class="h-captcha" data-captcha="true"></div>
+                        <button type="submit" class="button submitFormButton">WYPOŻYCZ</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="gallery">
+            <h3 class="wrapper">
+                <span class="iconify" data-icon="clarity:image-line" style="color: #ebebeb; font-size: 2.6rem;"></span>
+                <span>Nasza flota</span>
+            </h3>
+            <div class="gallery__panel wrapper">
+
+                <!-- <ul class="gallery__panel__list">
+                    <li class="gallery__panel__list__item accentColor" data-gallery-group="motocycles">Motocykle</li>
+                    <li class="gallery__panel__list__item" data-gallery-group="cars">Samochody osobowe</li>
+                    <li class="gallery__panel__list__item" data-gallery-group="trucks">Samochody ciężarowe</li>
+                    <li class="gallery__panel__list__item" data-gallery-group="others">Inne</li>
+                </ul> -->
+                <div class="gallery__panel__images">
+                    <div class="gallery__panel__images__wrapper" id="gallery">
+                        <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
+                            <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
+                            <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
+                            <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
+                            <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_1.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="989" data-pswp-height="625" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_1.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_2.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="1000" data-pswp-height="667" target="_blank" rel="noopener"
+                            data-gallery-group="cars">
+                            <img src="./dist/img/gallery_2.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                        <a href="./dist/img/gallery_3.min.jpg" class="gallery__panel__images__wrapper__image"
+                            data-pswp-width="284" data-pswp-height="177" target="_blank" rel="noopener"
+                            data-gallery-group="motocycles">
+                            <img src="./dist/img/gallery_3.min.jpg" alt="zdjecie samochodu">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="opinions wrapper" id="opinions">
+            <div class="opinions__image-shape">
+                <div class="opinions__image-shape__rectangle"></div>
+                <div class="opinions__image-shape__box">
+                    <div class="opinions__image-shape__box__person-data animate-visibility-visible">
+                        <img src="./dist/img/Martyna.min.png" alt="pierwsze zdjęcie osoby, która zostawiła opinię">
+                        <p>Martyna</p>
+                    </div>
+                    <div class="opinions__image-shape__box__person-data">
+                        <img src="./dist/img/Jan.min.png" alt="drugie zdjęcie osoby, która zostawiła opinię">
+                        <p>Jan</p>
+                    </div>
+                    <div class="opinions__image-shape__box__person-data">
+                        <img src="./dist/img/Tomasz.min.png" alt="trzecie zdjęcie osoby, która zostawiła opinię">
+                        <p>Tomasz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="opinions__opinions-set">
+                <div class="opinions__opinions-set__decoration-line"></div>
+                <h3>Opinie klientów</h3>
+                <div class="opinions__opinions-set__slick">
+                    <div class="opinions__opinions-set__slick__text animate-visibility-visible">
+                        <p>Znakomity stosunek ceny do jakości. Jestem bardzo zadowolona i z pewnością ponownie
+                            skorzystam z oferty. <span>😊</span></p>
+                    </div>
+                    <div class="opinions__opinions-set__slick__text">
+                        <p>Szeroki wachlarz ofert, a samochód schludny i bezproblemowy. Zdecydowanie dobrze wydane
+                            pieniądze.
+                            <span>😉</span>
+                        </p>
+                    </div>
+                    <div class="opinions__opinions-set__slick__text">
+                        <p>Jedna z najbardziej uprzejmych i pomocnych obsług klienta. Rezerwacja przebiegła szybko i
+                            sprawnie. Gorąco polecam!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="team wrapper" id="team">
+            <h3>Zespół</h3>
+            <div class="team__cards">
+                <div class="team__cards__card">
+                    <img src="./dist/img/Marta.min.png" alt="zdjecie członka teamu">
+                    <p class="team__cards__card--name">Marta</p>
+                    <p class="team__cards__card--info">
+                        Marta to kompetentna specjalistka ds. marketingu zawsze gotowa wesprzeć klientów, pełna
+                        kreatywności i profesjonalizmu.
+                    </p>
+                </div>
+                <div class="team__cards__card">
+                    <img src="./dist/img/Daniel.min.png" alt="zdjecie członka teamu">
+                    <p class="team__cards__card--name">Daniel</p>
+                    <p class="team__cards__card--info">
+                        Daniel to doświadczony specjalista, pełen entuzjazmu i zaangażowania w pomoc klientom.
+                    </p>
+                </div>
+                <div class="team__cards__card">
+                    <img src="./dist/img/Jakub.min.png" alt="zdjecie członka teamu">
+                    <p class="team__cards__card--name">Jakub</p>
+                    <p class="team__cards__card--info">
+                        Jakub to doświadczony sprzedawca, znakomity w budowaniu zaufania i dostarczaniu
+                        spersonalizowanych rozwiązań dla klientów.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="google-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2595.2316449869063!2d20.02623271227961!3d49.423434471295174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4715faaaaf839c61%3A0x356c2c1c19ad9216!2sPod%20G%C3%B3r%C4%85%203%2C%2034-424%20Szaflary!5e0!3m2!1spl!2spl!4v1718988494326!5m2!1spl!2spl"
+                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="footer__wrap wrapper">
+            <div class="footer__wrap__contact">
+                <h3>Kontakt</h3>
+                <a href="https://goo.gl/maps/33AN6opt8FJiTghH6" target="_blank" rel="noopener">
+                    <p><span class="iconify-inline" data-icon="fa:map-marker" style="color: #ebebeb;"
+                            data-width="1.6rem" data-height="1.6rem"></span>Pod Górą 3<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34-425 Szaflary </p>
+                </a>
+                <a href="tel:+48123321111">
+                    <p><span class="iconify-inline" data-icon="carbon:phone-voice-filled" style="color: #ebebeb;"
+                            data-width="1.6rem" data-height="1.6rem"></span>123 321 111</p>
+                </a>
+                <a href="mailto:kontakt@szaflarycars.pl">
+                    <p><span class="iconify-inline" data-icon="fluent:mail-16-filled" style="color: #ebebeb;"
+                            data-width="1.6rem" data-height="1.6rem"></span>kontakt@szaflarycars.pl</p>
+                </a>
+            </div>
+            <div class="footer__wrap__find-us">
+                <h3>Tu nas znajdziesz</h3>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+                    <p><span class="iconify-inline" data-icon="ant-design:instagram-filled" style="color: #ebebeb;"
+                            data-width="1.6rem" data-height="1.6rem"></span>SzaflaryCars</p>
+                </a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+                    <p><span class="iconify-inline" data-icon="bxl:facebook-circle" style="color: #ebebeb;"
+                            data-width="1.6rem" data-height="1.6rem"></span>SzaflaryCars</p>
+                </a>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <div class="footer__copy__copyright">
+                <a href="#">
+                    <p><span class="iconify-inline" data-icon="ant-design:copyright-circle-outlined"
+                            style="color: hsla(0,0%,92%,.8)" data-width="1.2rem"></span><span id="currentYear"></span>
+                        SzaflaryCars
+                    </p>
+                </a>
+            </div>
+            <div class="footer__copy__author">
+                <a href="mailto:danielcachro@gmail.com">
+                    <p><span class="iconify-inline" data-icon="akar-icons:person" style="color: hsla(0,0%,92%,.8)"
+                            data-width="1.2rem"></span>danielcachro@gmail.com</p>
+                </a>
+            </div>
+            <div class="footer__copy__author">
+                <a href="https://www.iubenda.com/privacy-policy/83175401">
+                    <p><span class="iconify-inline" data-icon="material-symbols:privacy-tip-outline"
+                            style="color: hsla(0,0%,92%,.8)" data-width="1.2rem"></span>Polityka Prywatności</p>
+                </a>
+            </div>
+            <div class="footer__copy__info">
+                <p style="color: hsla(0,0%,92%,.8); padding-top: 1.5em;">
+                    Strona została stworzona w ramach testu pozycjonowania witryny. Nie reprezentuje realnie istniejącej
+                    firmy ani nie zawiera prawdziwej oferty usług.
+                </p>
+            </div>
+            <div class="footer__copy__info">
+                <p style="color: hsla(0,0%,92%,.8); padding-top: 1.5em;">
+                    Potrzebujesz strony internetowej zaprojektowanej od podstaw, specjalnie dla Ciebie, bez użycia
+                    narzędzi typu WordPress pogarszających pozycje witryny w wyszukiwarce Google? Napisz do mnie na
+                    adres <a href="mailto:danielcachro@gmail.com" class="accentColor"
+                        style="text-decoration: none;">danielcachro@gmail.com<a />!
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <!-- <script type="text/javascript" src="./dist/assets/slick/slick.min.js"></script> -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <script type="module">
+        import PhotoSwipeLightbox from './dist/assets/photoswipe/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery',
+            children: 'a',
+            pswpModule: () => import('./dist/assets/photoswipe/photoswipe.esm.js'),
+            wheelToZoom: true,
+            errorMsg: 'Coś poszło nie tak podczas próby załadowania zdjęcia :c',
+            closeOnVerticalDrag: true,
+            imageClickAction: 'zoom',
+            bgClickAction: 'close',
+            tapAction: 'close'
+        });
+        lightbox.init();
+    </script>
+    <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>
